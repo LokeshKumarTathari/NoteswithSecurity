@@ -31,6 +31,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -96,6 +98,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return false;
+    }
+
+    public void logout(View v){
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(),LoginPage.class));
+        finish();
     }
 
     @Override
