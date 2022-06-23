@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Notes with Security</string>
+    <string name="w9546964_tees_ac_uk">w9546964@tees.ac.uk</string>
+    <string name="email_id">Email ID</string>
+    <string name="if_you_have_any_problem_regarding_this_application_then_you_must_contact_via_email">If you have any problem regarding this application then you must contact via Email.</string>
+    <string name="my_name_is_lokesh_kumar_tathari_and_this_application_is_developed_by_me_as_part_of_ica">My name is Lokesh Kumar Tathari and this application is developed by me as part of ICA.</string>
+    <string name="about">About</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="content_presented_in_this_app_is_collected_from_the_internet_i_do_not_have_any_kind_of_rights_on_the_material_n_if_you_have_any_personal_ownership_rights_on_any_of_the_content_shown_in_the_application_then_you_can_inform_us_by_sending_an_email_to_the_given_below_with_proof_of_ownership_authority_ni_will_check_the_validity_of_your_claim_doing_so_will_remove_content_immediately">Content presented in this app is collected from the internet. I do not have any kind of rights on the material.\n If you have any personal ownership rights on any of the content shown in the application then you can inform us by sending an Email to the given below with proof of ownership/authority.\nI will check the validity of your claim doing so will remove content immediately.</string>
+    <string name="add_note">Add Note</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="register">Register</string>
+    <string name="already_registered_login">Already Registered? Login</string>
+    <string name="new_user_registration">New User Registration</string>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:background="@drawable/dialog_background"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/disclaimer"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@string/content_presented_in_this_app_is_collected_from_the_internet_i_do_not_have_any_kind_of_rights_on_the_material_n_if_you_have_any_personal_ownership_rights_on_any_of_the_content_shown_in_the_application_then_you_can_inform_us_by_sending_an_email_to_the_given_below_with_proof_of_ownership_authority_ni_will_check_the_validity_of_your_claim_doing_so_will_remove_content_immediately"
+            android:textColor="#CFCFCF"
+            android:textAlignment="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@string/if_you_have_any_problem_regarding_this_application_then_you_must_contact_via_email"
+            android:textColor="#CFCFCF"
+            android:textAlignment="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:background="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+        <TextView
+            android:text="@string/email_id"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@string/w9546964_tees_ac_uk"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

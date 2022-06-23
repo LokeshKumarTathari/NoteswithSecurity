@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity - Copy/app/src/main/res/drawable/dialog_background.xml" value="0.2265" />
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity - Copy/app/src/main/res/drawable/ic_baseline_fingerprint_24.xml" value="0.1565" />
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity - Copy/app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.1565" />
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity - Copy/app/src/main/res/drawable/ic_baseline_note_add_24.xml" value="0.1565" />
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity - Copy/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1565" />
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity - Copy/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1565" />
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity - Copy/app/src/main/res/layout/about.xml" value="0.25" />
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity - Copy/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity - Copy/app/src/main/res/layout/activity_main2.xml" value="0.25" />
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity - Copy/app/src/main/res/layout/activity_note_editor.xml" value="0.25" />
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity - Copy/app/src/main/res/layout/disclaimer.xml" value="0.25" />
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity - Copy/app/src/main/res/menu/add_note_menu.xml" value="0.264" />
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity/app/src/main/res/layout/about.xml" value="0.25" />
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity/app/src/main/res/layout/activity_note_editor.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity/app/src/main/res/layout/activity_registration.xml" value="0.25" />
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity/app/src/main/res/menu/add_note_menu.xml" value="0.25" />
+        <entry key="..\:/Users/LOKESH KUMAR TATHARI/AndroidStudioProjects/NoteswithSecurity/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2265" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
