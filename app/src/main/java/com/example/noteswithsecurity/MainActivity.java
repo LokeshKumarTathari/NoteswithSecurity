@@ -96,7 +96,6 @@ public class MainActivity extends AppCompatActivity {
             disclaimer.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             disclaimer.show();
         }
-
         return false;
     }
 

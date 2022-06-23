@@ -29,6 +29,7 @@
 
     <item android:id="@+id/logout"
         android:title="Logout"
-        android:onClick="logout"/>
+        android:onClick="logout"
+        />
 
 </menu>
