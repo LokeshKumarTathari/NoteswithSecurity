@@ -109,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
         HashSet<String> set = (HashSet<String>) sharedPreferences.getStringSet("notes", null);
 
         if (set == null) {
-
             Toast.makeText(this,"Please Add Notes", Toast.LENGTH_SHORT).show();
         } else {
             notes = new ArrayList(set);
