@@ -99,12 +99,6 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-    public void logout(View v){
-        FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(getApplicationContext(),LoginPage.class));
-        finish();
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

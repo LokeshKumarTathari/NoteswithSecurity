@@ -9,19 +9,17 @@
         <activity android:name=".Registration"
             android:exported="false"
             android:parentActivityName=".LoginPage"/>
-        <activity android:name=".MainActivity"
-            android:exported="false"
-            android:parentActivityName=".LoginPage"/>
+
         <activity android:name=".NoteEditorActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity"/>
-        <activity android:name=".MainActivity2"
+        <activity android:name=".LoginPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".LoginPage"/>
+        <activity android:name=".MainActivity"/>
     </application>
 </manifest>
