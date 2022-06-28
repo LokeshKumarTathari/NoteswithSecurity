@@ -96,6 +96,12 @@ public class MainActivity extends AppCompatActivity {
             disclaimer.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             disclaimer.show();
         }
+
+        else if (item.getItemId() == R.id.location){
+            Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
+            startActivity(intent);
+            return true;
+        }
         return false;
     }
 

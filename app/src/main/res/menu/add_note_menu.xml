@@ -26,5 +26,8 @@
         android:id="@+id/disclaimer"
         android:iconTint="@color/black"
         android:title="Disclaimer" />
+    <item
+        android:id="@+id/location"
+        android:title="University Location" />
 
 </menu>
