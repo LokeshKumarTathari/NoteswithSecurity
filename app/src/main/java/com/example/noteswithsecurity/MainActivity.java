@@ -1,5 +1,7 @@
 package com.example.noteswithsecurity;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
@@ -15,6 +17,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -31,15 +34,28 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
     static ArrayList<String> notes = new ArrayList<>();
     static ArrayAdapter arrayAdapter;
+    FirebaseFirestore fStore;
+    DocumentReference df;
+    FirebaseUser firebaseuser;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -111,14 +127,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ListView listView = findViewById(R.id.listView);
-        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.example.notes", Context.MODE_PRIVATE);
-        HashSet<String> set = (HashSet<String>) sharedPreferences.getStringSet("notes", null);
+        fStore = FirebaseFirestore.getInstance();
+        firebaseuser = FirebaseAuth.getInstance().getCurrentUser();
+        df = fStore.collection("notes").document(firebaseuser.getUid()).collection("myNotes").document();
+        df.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    List<String> services = new ArrayList<>();
+                    DocumentSnapshot document = task.getResult();
+                    Toast.makeText(getApplicationContext(),"TESTT   "+document, Toast.LENGTH_SHORT).show();
+                    if (document.exists()) {
+                        Map<String, Object> map = document.getData();
+                        for (Map.Entry<String, Object> entry : map.entrySet()) {
+                            services.add(entry.getValue().toString());
+                        }
+                        notes = new ArrayList(services);
+                        //Do what you need to do with your services List
+                    } else {
+                        Toast.makeText(getApplicationContext(),"No Documents", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Log.d(TAG, "get failed with ", task.getException()); //Don't ignore potential errors!
+                }
+            }
+        });
 
-        if (set == null) {
-            Toast.makeText(this,"Please Add Notes", Toast.LENGTH_SHORT).show();
-        } else {
-            notes = new ArrayList(set);
-        }
 
         // Using custom listView Provided by Android Studio
         arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1, notes);
