@@ -41,6 +41,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -56,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
     FirebaseFirestore fStore;
     DocumentReference df;
     FirebaseUser firebaseuser;
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -130,30 +131,23 @@ public class MainActivity extends AppCompatActivity {
         ListView listView = findViewById(R.id.listView);
         fStore = FirebaseFirestore.getInstance();
         firebaseuser = FirebaseAuth.getInstance().getCurrentUser();
-        df = fStore.collection("notes").document(firebaseuser.getUid()).collection("myNotes").document();
-        df.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()) {
-                    List<String> services = new ArrayList<>();
-                    DocumentSnapshot document = task.getResult();
-                    Toast.makeText(getApplicationContext(),"TESTT   "+document, Toast.LENGTH_SHORT).show();
-                    if (document.exists()) {
-                        Map<String, Object> map = document.getData();
-                        for (Map.Entry<String, Object> entry : map.entrySet()) {
-                            services.add(entry.getValue().toString());
+        fStore.collection("notes")
+                .document(firebaseuser.getUid())
+                .collection("myNotes")
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isComplete()){
+                        List<String> services = new ArrayList<>();
+                        for(QueryDocumentSnapshot document : task.getResult()){
+                            Log.d(TAG, document.getId()+ "=>" + document.getData());
+                            services.add(document.getData().get("content").toString());
                         }
                         notes = new ArrayList(services);
-                        //Do what you need to do with your services List
-                    } else {
+                    }
+                    else {
                         Toast.makeText(getApplicationContext(),"No Documents", Toast.LENGTH_SHORT).show();
                     }
-                } else {
-                    Log.d(TAG, "get failed with ", task.getException()); //Don't ignore potential errors!
-                }
-            }
-        });
-
+                });
 
         // Using custom listView Provided by Android Studio
         arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1, notes);
