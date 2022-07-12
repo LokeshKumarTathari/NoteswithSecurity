@@ -162,7 +162,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), NoteEditorActivity.class);
                 intent.putExtra("noteId", i);
                 startActivity(intent);
-
             }
         });
 
