@@ -72,7 +72,8 @@ public class LoginPage extends AppCompatActivity {
         mRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),Registration.class));
+                Intent intent = new Intent(getApplicationContext(), Registration.class);
+                startActivity(intent);
             }
         });
 }

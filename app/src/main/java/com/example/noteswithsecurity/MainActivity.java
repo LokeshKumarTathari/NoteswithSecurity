@@ -62,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setTitle("Secured Notes");
 
         mFirebaseFirestore = FirebaseFirestore.getInstance();
         mCurrentUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -120,6 +122,13 @@ public class MainActivity extends AppCompatActivity {
             about.setContentView(R.layout.about);
             about.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             about.show();
+            return true;
+        }else if (item.getItemId() == R.id.disclaimer){
+            Dialog disclaimer = new Dialog(MainActivity.this);
+            disclaimer.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            disclaimer.setContentView(R.layout.disclaimer);
+            disclaimer.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            disclaimer.show();
             return true;
         } else if (item.getItemId() == R.id.location) {
             Intent intent = new Intent(getApplicationContext(), MapsActivity.class);

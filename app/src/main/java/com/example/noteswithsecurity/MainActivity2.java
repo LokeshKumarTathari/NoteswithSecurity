@@ -34,7 +34,7 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        getSupportActionBar().setTitle(Html.fromHtml("<font color=\"black\">"+ getString(R.string.app_name) + "</font>"));
+        getSupportActionBar().setTitle(Html.fromHtml("<font color=\"white\">"+ getString(R.string.app_name) + "</font>"));
         imageViewLogin= findViewById(R.id.imageView);
 
         BiometricManager biometricManager = BiometricManager.from(this);
