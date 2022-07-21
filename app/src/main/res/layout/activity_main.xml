@@ -12,6 +12,7 @@
 
     <!--Adding a TextView -->
 
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="379dp"
